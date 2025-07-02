@@ -1,69 +1,414 @@
-# React + TypeScript + Vite
+# 🚀 React InScroll
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React InScroll Logo](https://img.shields.io/badge/React-InScroll-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Beautiful scroll animations for modern React applications**
 
-## Expanding the ESLint configuration
+[![npm version](https://img.shields.io/npm/v/react-inscroll.svg?style=flat-square)](https://www.npmjs.com/package/react-inscroll)
+[![npm downloads](https://img.shields.io/npm/dm/react-inscroll.svg?style=flat-square)](https://www.npmjs.com/package/react-inscroll)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Demo](https://your-demo-link.com) • [Documentation](https://your-docs-link.com) • [Examples](https://your-examples-link.com)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+</div>
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ✨ Features
+
+- 🎭 **25+ Animation Types** - Fade, Zoom, Flip, Slide, and more
+- 🎯 **TypeScript Ready** - Full type safety out of the box
+- ⚡ **Performance Optimized** - Uses Intersection Observer API
+- 🎨 **Highly Customizable** - Control duration, delay, offset, and more
+- 📱 **Responsive** - Works seamlessly on all devices
+- 🔄 **Flexible Behavior** - One-time or repeating animations
+- 🪶 **Lightweight** - Minimal bundle size impact
+- 🎪 **Interactive Demo** - Click to replay animations
+
+## 🎬 Preview
+
+![React InScroll Demo](https://via.placeholder.com/800x400/4338ca/ffffff?text=React+InScroll+Demo)
+
+*Smooth, performant scroll animations that bring your React components to life*
+
+## 📦 Installation
+
+```bash
+# npm
+npm install react-inscroll
+
+# yarn
+yarn add react-inscroll
+
+# pnpm
+pnpm add react-inscroll
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Quick Start
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Import and Setup
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { InScrollProvider, InScrollElement } from 'react-inscroll';
+import 'react-inscroll/styles/animations.css';
+
+function App() {
+  return (
+    <InScrollProvider>
+      <div>
+        <InScrollElement animation="fade-up">
+          <h1>Hello, World! 👋</h1>
+        </InScrollElement>
+        
+        <InScrollElement animation="zoom-in" delay={200}>
+          <p>This text will zoom in after 200ms delay</p>
+        </InScrollElement>
+      </div>
+    </InScrollProvider>
+  );
+}
 ```
+
+### 2. Global Configuration
+
+```tsx
+<InScrollProvider 
+  config={{
+    duration: 800,     // Animation duration in ms
+    once: false,       // Animate every time element comes into view
+    mirror: true,      // Reverse animation when element leaves view
+    offset: 120,       // Trigger offset in pixels
+    easing: 'ease'     // CSS easing function
+  }}
+>
+  {/* Your app components */}
+</InScrollProvider>
+```
+
+## 🎭 Animation Types
+
+### Fade Animations
+```tsx
+<InScrollElement animation="fade-up">Content</InScrollElement>
+<InScrollElement animation="fade-down">Content</InScrollElement>
+<InScrollElement animation="fade-left">Content</InScrollElement>
+<InScrollElement animation="fade-right">Content</InScrollElement>
+<InScrollElement animation="fade-up-left">Content</InScrollElement>
+<InScrollElement animation="fade-up-right">Content</InScrollElement>
+<InScrollElement animation="fade-down-left">Content</InScrollElement>
+<InScrollElement animation="fade-down-right">Content</InScrollElement>
+```
+
+### Zoom Animations
+```tsx
+<InScrollElement animation="zoom-in">Content</InScrollElement>
+<InScrollElement animation="zoom-out">Content</InScrollElement>
+<InScrollElement animation="zoom-in-up">Content</InScrollElement>
+<InScrollElement animation="zoom-in-down">Content</InScrollElement>
+<InScrollElement animation="zoom-in-left">Content</InScrollElement>
+<InScrollElement animation="zoom-in-right">Content</InScrollElement>
+<InScrollElement animation="zoom-out-up">Content</InScrollElement>
+<InScrollElement animation="zoom-out-down">Content</InScrollElement>
+<InScrollElement animation="zoom-out-left">Content</InScrollElement>
+<InScrollElement animation="zoom-out-right">Content</InScrollElement>
+```
+
+### Flip Animations
+```tsx
+<InScrollElement animation="flip-up">Content</InScrollElement>
+<InScrollElement animation="flip-down">Content</InScrollElement>
+<InScrollElement animation="flip-left">Content</InScrollElement>
+<InScrollElement animation="flip-right">Content</InScrollElement>
+```
+
+### Slide Animations
+```tsx
+<InScrollElement animation="slide-up">Content</InScrollElement>
+<InScrollElement animation="slide-down">Content</InScrollElement>
+<InScrollElement animation="slide-left">Content</InScrollElement>
+<InScrollElement animation="slide-right">Content</InScrollElement>
+```
+
+### Special Animations
+```tsx
+<InScrollElement animation="bounce-in">Content</InScrollElement>
+<InScrollElement animation="pulse">Content</InScrollElement>
+<InScrollElement animation="shake">Content</InScrollElement>
+<InScrollElement animation="flash">Content</InScrollElement>
+<InScrollElement animation="float-up">Content</InScrollElement>
+<InScrollElement animation="scale-up">Content</InScrollElement>
+```
+
+## 🎯 Advanced Usage
+
+### Individual Element Configuration
+
+```tsx
+<InScrollElement 
+  animation="fade-up"
+  delay={300}
+  duration={1000}
+  once={true}
+  mirror={false}
+  offset={50}
+  easing="ease-in-out"
+  as="section"  // Custom HTML tag
+  className="my-custom-class"
+>
+  <h2>Advanced Configuration</h2>
+</InScrollElement>
+```
+
+### Clickable Animations (Interactive Demo)
+
+```tsx
+import { useClickableAnimation } from 'react-inscroll';
+
+function ClickableCard() {
+  const { animationKey, isAnimating, clickableProps } = useClickableAnimation();
+
+  return (
+    <div className="relative">
+      <InScrollElement 
+        key={animationKey}
+        animation="zoom-in"
+        {...clickableProps}
+      >
+        <div className="card">
+          Click me to replay animation! 🎭
+        </div>
+      </InScrollElement>
+      {!isAnimating && (
+        <div className="replay-badge">
+          Click to replay
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+### Custom Hook for Scroll Detection
+
+```tsx
+import { useInView } from 'react-inscroll';
+
+function MyComponent() {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false
+  });
+
+  return (
+    <div ref={ref}>
+      {inView ? '👀 I am visible!' : '🫥 I am hidden!'}
+    </div>
+  );
+}
+```
+
+### Global Configuration Hook
+
+```tsx
+import { useInScrollConfig } from 'react-inscroll';
+
+function MyComponent() {
+  const config = useInScrollConfig();
+  
+  // Access global configuration
+  console.log(config.duration); // 800
+  console.log(config.once);     // false
+  
+  return <div>Component with config access</div>;
+}
+```
+
+## ⚙️ Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `animation` | `AnimationType` | `'fade-up'` | Type of animation to apply |
+| `duration` | `number` | `600` | Animation duration in milliseconds |
+| `delay` | `number` | `0` | Delay before animation starts (ms) |
+| `once` | `boolean` | `true` | Whether animation should occur only once |
+| `mirror` | `boolean` | `false` | Whether to reverse animation on scroll out |
+| `offset` | `number` | `100` | Trigger offset in pixels from viewport |
+| `easing` | `string` | `'ease'` | CSS easing function |
+| `as` | `string` | `'div'` | HTML tag to render |
+| `className` | `string` | `''` | Additional CSS classes |
+
+## 🎨 Animation Behavior
+
+### Once vs Mirror
+
+```tsx
+// Animation happens only once (default)
+<InScrollElement animation="fade-up" once={true}>
+  <div>Animates once when first visible</div>
+</InScrollElement>
+
+// Animation repeats when scrolling up/down
+<InScrollElement animation="fade-up" once={false} mirror={true}>
+  <div>Animates every time it enters/leaves viewport</div>
+</InScrollElement>
+```
+
+### Custom CSS Variables
+
+```css
+:root {
+  --inscroll-duration: 800ms;
+  --inscroll-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --inscroll-distance: 60px;
+  --inscroll-scale: 0.8;
+  --inscroll-rotation: 180deg;
+}
+```
+
+## 🎪 Interactive Features
+
+React InScroll comes with built-in interactive features for demos and presentations:
+
+```tsx
+// Cards that can be clicked to replay animations
+function InteractiveDemo() {
+  return (
+    <div className="demo-grid">
+      <ClickableCard animation="fade-up" delay={100}>
+        <DemoCard title="Fade Up" />
+      </ClickableCard>
+      
+      <ClickableCard animation="zoom-in" delay={200}>
+        <DemoCard title="Zoom In" />
+      </ClickableCard>
+      
+      <ClickableCard animation="flip-left" delay={300}>
+        <DemoCard title="Flip Left" />
+      </ClickableCard>
+    </div>
+  );
+}
+```
+
+## 🏗️ Architecture
+
+React InScroll is built with performance and developer experience in mind:
+
+- **Intersection Observer API** for efficient scroll detection
+- **React Context** for global configuration management
+- **TypeScript** for complete type safety
+- **CSS Animations** for smooth 60fps performance
+- **Tree Shaking** friendly for minimal bundle size
+- **Zero Dependencies** (except React)
+
+## 📱 Browser Support
+
+- ✅ Chrome 58+
+- ✅ Firefox 55+
+- ✅ Safari 12.1+
+- ✅ Edge 79+
+- ✅ iOS Safari 12.2+
+- ✅ Android Chrome 88+
+
+*For older browsers, a polyfill for Intersection Observer API may be required.*
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Q: Animations not working?**
+```tsx
+// Make sure to import the CSS file
+import 'react-inscroll/styles/animations.css';
+
+// And wrap your app with InScrollProvider
+<InScrollProvider>
+  <App />
+</InScrollProvider>
+```
+
+**Q: TypeScript errors?**
+```tsx
+// Make sure you're importing types correctly
+import type { AnimationType } from 'react-inscroll';
+```
+
+**Q: Performance issues?**
+```tsx
+// Use 'once: true' for better performance on long pages
+<InScrollProvider config={{ once: true }}>
+  <App />
+</InScrollProvider>
+```
+
+## 📊 Bundle Size
+
+| Package | Size (gzipped) |
+|---------|----------------|
+| Core Library | ~3.2kb |
+| CSS Animations | ~2.1kb |
+| **Total** | **~5.3kb** |
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/react-inscroll.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build library
+npm run build
+
+# Build demo
+npm run build:demo
+```
+
+### Project Structure
+
+```
+react-inscroll/
+├── src/
+│   ├── lib/
+│   │   ├── components/     # React components
+│   │   ├── hooks/          # Custom hooks
+│   │   ├── context/        # React context
+│   │   ├── styles/         # CSS animations
+│   │   └── types.ts        # TypeScript definitions
+│   ├── App.tsx            # Demo application
+│   └── main.tsx           # Entry point
+├── dist/                  # Built library
+└── docs/                  # Documentation
+```
+
+## 📜 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for details about changes in each version.
+
+## 📄 License
+
+MIT © [Your Name](https://github.com/your-username)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the React community**
+
+[⭐ Star this repo](https://github.com/your-username/react-inscroll) • [🐛 Report Issues](https://github.com/your-username/react-inscroll/issues) • [💡 Request Features](https://github.com/your-username/react-inscroll/issues/new)
+
+</div>
