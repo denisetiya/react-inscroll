@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![React InScroll Logo](https://img.shields.io/badge/React-InScroll-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+<img src="./public/logo.png" alt="React InScroll Logo" width="200" height="200" />
 
 **Beautiful scroll animations for modern React applications**
 
@@ -11,7 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-[Demo](https://your-demo-link.com) • [Documentation](https://your-docs-link.com) • [Examples](https://your-examples-link.com)
+[🚀 Live Demo](https://react-inscroll-demo.vercel.app) • [📖 Documentation](https://github.com/denisetiya/react-inscroll/wiki) • [💻 Examples](https://github.com/denisetiya/react-inscroll/wiki/Examples-and-Tutorials)
 
 </div>
 
@@ -30,9 +30,13 @@
 
 ## 🎬 Preview
 
-![React InScroll Demo](https://via.placeholder.com/800x400/4338ca/ffffff?text=React+InScroll+Demo)
+<div align="center">
+  <img src="https://github.com/denisetiya/react-inscroll/raw/main/assets/demo-preview.gif" alt="React InScroll Demo" width="800" />
+</div>
 
 *Smooth, performant scroll animations that bring your React components to life*
+
+> 🚀 **[View Live Demo](https://react-inscroll-demo.vercel.app)** | 📖 **[Full Documentation](https://github.com/denisetiya/react-inscroll/wiki)** | 🎯 **[Getting Started Guide](https://github.com/denisetiya/react-inscroll/wiki/Getting-Started)**
 
 ## 📦 Installation
 
@@ -374,8 +378,8 @@ npm test
 # Build library
 npm run build
 
-# Build demo
-npm run build:demo
+# Build demo for Vercel
+npm run build:vercel
 ```
 
 ### Project Structure
