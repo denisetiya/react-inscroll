@@ -1,7 +1,7 @@
 {
   "name": "react-inscroll",
   "version": "1.0.0",
-  "description": "A React library for animating elements on scroll, inspired by AOS (Animate On Scroll)",
+  "description": "Beautiful scroll animations for modern React applications. TypeScript-ready with 25+ animation types.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -11,10 +11,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles": "./dist/styles/animations.css"
+    "./styles/animations.css": "./dist/styles/animations.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "react",
@@ -22,10 +24,31 @@
     "scroll",
     "aos",
     "typescript",
-    "intersection-observer"
+    "intersection-observer",
+    "fade",
+    "zoom",
+    "flip",
+    "slide",
+    "ui",
+    "motion",
+    "parallax",
+    "reveal",
+    "transition"
   ],
-  "author": "Deni Setiya",
+  "author": {
+    "name": "Deni Setiya",
+    "email": "denisetiya3@outlook.co.id",
+    "url": "https://github.com/denisetiya"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/denisetiya/react-inscroll#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisetiya/react-inscroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denisetiya/react-inscroll/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "npm run clean && npm run build:types && npm run build:js && npm run build:copy-css",

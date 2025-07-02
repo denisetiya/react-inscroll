@@ -1,0 +1,44 @@
+# Development files
+src/
+public/
+.vscode/
+node_modules/
+
+# Config files
+*.config.js
+*.config.ts
+tsconfig*.json
+.env*
+.eslintrc*
+.gitignore
+
+# Development assets
+index.html
+vite-env.d.ts
+
+# Documentation (keep README.md, CHANGELOG.md)
+CONTRIBUTING.md
+EXAMPLES.md
+API-REFERENCE.md
+DEV-README.md
+ANIMATION-BEHAVIOR.md
+
+# Build artifacts
+.turbo/
+coverage/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

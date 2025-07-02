@@ -360,7 +360,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/react-inscroll.git
+git clone https://github.com/denisetiya/react-inscroll.git
 
 # Install dependencies
 npm install
@@ -401,7 +401,7 @@ See [CHANGELOG.md](CHANGELOG.md) for details about changes in each version.
 
 ## 📄 License
 
-MIT © [Your Name](https://github.com/your-username)
+MIT © [Deni Setiya](https://github.com/denisetiya)
 
 ---
 
@@ -409,6 +409,6 @@ MIT © [Your Name](https://github.com/your-username)
 
 **Made with ❤️ for the React community**
 
-[⭐ Star this repo](https://github.com/your-username/react-inscroll) • [🐛 Report Issues](https://github.com/your-username/react-inscroll/issues) • [💡 Request Features](https://github.com/your-username/react-inscroll/issues/new)
+[⭐ Star this repo](https://github.com/denisetiya/react-inscroll) • [🐛 Report Issues](https://github.com/denisetiya/react-inscroll/issues) • [💡 Request Features](https://github.com/denisetiya/react-inscroll/issues/new)
 
 </div>
