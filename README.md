@@ -11,7 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-[🚀 Live Demo](https://react-inscroll-demo.vercel.app) • [📖 Documentation](https://github.com/denisetiya/react-inscroll/wiki) • [💻 Examples](https://github.com/denisetiya/react-inscroll/wiki/Examples-and-Tutorials)
+[🚀 Live Demo](https://react-inscroll.vercel.app) • [📖 Documentation](https://github.com/denisetiya/react-inscroll/wiki) • [💻 Examples](https://github.com/denisetiya/react-inscroll/wiki/Examples-and-Tutorials)
 
 </div>
 
