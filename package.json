@@ -1,6 +1,6 @@
 {
   "name": "react-inscroll",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Beautiful scroll animations for modern React applications. TypeScript-ready with 25+ animation types.",
   "type": "module",
   "main": "./dist/index.js",
@@ -51,15 +51,19 @@
   },
   "scripts": {
     "dev": "vite",
+    "build-fe": "vite build",
     "build": "npm run clean && npm run build:types && npm run build:js && npm run build:copy-css",
     "build:lib": "npm run clean && npm run build:types && npm run build:js && npm run build:copy-css",
     "build:types": "tsc -p tsconfig.lib.json",
     "build:js": "vite build",
     "build:copy-css": "cp src/lib/styles/animations.css dist/styles/animations.css",
-    "build:demo": "vite build --mode development",
+    "build:demo": "vite build --mode demo",
+    "build:vercel": "vite build --mode demo --outDir dist-demo",
     "clean": "rm -rf dist",
+    "clean:demo": "rm -rf dist-demo",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:demo": "vite preview --outDir dist-demo"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
