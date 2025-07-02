@@ -414,7 +414,7 @@ function App() {
                 </div>
               </ClickableCard>
 
-              <ClickableCard animation="fade-up" delay={400}>
+              <InScrollElement animation="fade-up" delay={400} once={false} mirror={true}>
                 <div className="relative p-8 bg-white rounded-3xl shadow-xl border border-green-100 overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-green-600"></div>
                   <div className="flex items-center gap-3 mb-6">
@@ -436,11 +436,11 @@ function App() {
                     </code>
                   </div>
                 </div>
-              </ClickableCard>
+              </InScrollElement>
             </div>
 
             {/* Interactive Demo Area */}
-            <ClickableCard animation="zoom-in" delay={600}>
+            <InScrollElement  animation="zoom-in" delay={600} once={false} mirror={true}>
               <div className="relative p-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-3xl text-white text-center shadow-2xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
                 <div className="relative z-10">
@@ -455,7 +455,7 @@ function App() {
                   </div>
                 </div>
               </div>
-            </ClickableCard>
+            </InScrollElement>
           </div>
         </section>
 
